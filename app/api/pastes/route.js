@@ -15,11 +15,17 @@ export async function POST(req) {
   if (typeof content !== "string" || content.trim().length === 0) {
     return Response.json({ error: "content required" }, { status: 400 });
   }
-  if (ttl_seconds !== undefined && (!Number.isInteger(ttl_seconds) || ttl_seconds < 1)) {
-    return Response.json({ error: "invalid ttl_seconds" }, { status: 400 });
+
+  if (ttl_seconds !== undefined) {
+    if (!Number.isInteger(ttl_seconds) || ttl_seconds < 1) {
+      return Response.json({ error: "invalid ttl_seconds" }, { status: 400 });
+    }
   }
-  if (max_views !== undefined && (!Number.isInteger(max_views) || max_views < 1)) {
-    return Response.json({ error: "invalid max_views" }, { status: 400 });
+
+  if (max_views !== undefined) {
+    if (!Number.isInteger(max_views) || max_views < 1) {
+      return Response.json({ error: "invalid max_views" }, { status: 400 });
+    }
   }
 
   const id = nanoid(10);
@@ -36,6 +42,6 @@ export async function POST(req) {
 
   return Response.json({
     id,
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/p/${id}`
+    url: `/p/${id}`
   });
 }
