@@ -1,7 +1,9 @@
 Pastebin Lite Assignment
 
 Overview
+
 This project is a production ready Pastebin Lite application built using Next.js App Router and Upstash Redis.
+
 It satisfies all functional, API, and persistence requirements described in the assignment PDF.
 
 Features
@@ -37,10 +39,13 @@ Steps
 3. Create a .env.local file with the following values
 
    UPSTASH_REDIS_REST_URL=your_upstash_url
+
    UPSTASH_REDIS_REST_TOKEN=your_upstash_token
+
    NEXT_PUBLIC_BASE_URL=http://localhost:3000
 
 4. Run the development server
+
    npm run dev
 
 5. Open http://localhost:3000 in your browser
