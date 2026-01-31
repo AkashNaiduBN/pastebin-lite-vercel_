@@ -22,7 +22,9 @@ Tech Stack
 - Deployed on Vercel
 
 Persistence Layer
+
 Upstash Redis is used as the persistence layer.
+
 It is serverless friendly and survives across requests, which is required for Vercel deployments.
 
 Local Setup Instructions
