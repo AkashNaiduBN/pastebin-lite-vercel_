@@ -50,3 +50,4 @@ Deployment
 - Import the project into Vercel
 - Set the same environment variables in Vercel
 - Deploy
+
