@@ -26,7 +26,7 @@ It is serverless friendly and survives across requests, which is required for Ve
 Local Setup Instructions
 
 Prerequisites
-- Node.js 18 or above
+- Node.js 18
 - An Upstash Redis database
 
 Steps
